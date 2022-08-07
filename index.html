@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MArks Calculator Program</h1>
+
+    <form onsubmit="Calculator(); return false">
+        <label>English</label><br>
+        <input type="number" id="english" placeholder="enter english number"><br>
+        <label>Urdu</label><br>
+        <input type="number" id="urdu" placeholder="enter urdu number"><br>
+        <label>Maths</label><br>
+        <input type="number" id="maths" placeholder="enter maths number"><br>
+        <label>Biology</label><br>
+        <input type="number" id="bio" placeholder="enter bio number"><br>
+        <label>Chemistry</label><br>
+        <input type="number" id="chem" placeholder="enter chem number"><br>
+        <label>Computer</label><br>
+        <input type="number" id="comp" placeholder="enter comp number"><br>
+        <label>Datascience</label><br>
+        <input type="number" id="datasci" placeholder="enter datasci number"><br>
+        <label>Datasctuscture</label><br>
+        <input type="number" id="datastruc" placeholder="enter datastruc number"><br>
+        <label>Ecomics</label><br>
+        <input type="number" id="ecnom" placeholder="enter ecnom number"><br>
+        <button type="submit">calculate</button>
+    </form>
+    <h1 id="result"></h1>
+    <script>
+        function Calculator(){
+            let english = parseInt(document.querySelector("#english").value);
+            let urdu = parseInt(document.querySelector("#urdu").value);
+            let maths = parseInt(document.querySelector("#maths").value);
+            let bio = parseInt(document.querySelector("#bio").value);
+            let chem = parseInt(document.querySelector("#chem").value);
+            let comp = parseInt(document.querySelector("#comp").value);
+            let datasci = parseInt(document.querySelector("#datasci").value);
+            let datastruc = parseInt(document.querySelector("#datastruc").value);
+            let ecnom = parseInt(document.querySelector("#ecnom").value);
+            let obtainedmarks = english + urdu + maths + bio + chem + comp + datasci +datastruc + ecnom;
+            let result = obtainedmarks * 100 / 900;
+        document.querySelector("#result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
